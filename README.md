@@ -2,8 +2,8 @@
 Problems are generated with Google Gemini<br>
 Answers are my own answers
 
-### 2026/01/04 
-Question --> 
+## 2026/01/04 
+## Question --> 
 ### The Challenge: Temperature Pivot Finder
 
 Write a Python program that analyzes a list of daily temperatures to find a "Pivot Index." This is the position where the sum of all temperatures to the **left** of the index is exactly equal to the sum of all temperatures to the **right**.
@@ -22,7 +22,7 @@ Write a Python program that analyzes a list of daily temperatures to find a "Piv
 ---
 
 Would you like me to provide a set of test cases to verify your code once you've finished?<br>
-Result --> 
+## Result --> 
 ```python
 List_Temps = [10, -5, 3, 8, 2, 6]
 List_Left = [] 
