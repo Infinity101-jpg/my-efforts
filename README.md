@@ -12,13 +12,13 @@ Write a Python program that analyzes a list of daily temperatures to find a "Piv
 
 **Requirements**
 
-Create an array (list) of integers representing temperatures, such as `temps = [10, -5, 3, 8, 2, 6]`.
-Your logic must calculate the total sums on both sides for every possible index until a match is found.
-If a pivot exists, print the index; if no such index exists, print `-1`.
+* Create an array (list) of integers representing temperatures, such as `temps = [10, -5, 3, 8, 2, 6]`.<br><br>
+* Your logic must calculate the total sums on both sides for every possible index until a match is found.<br><br>
+* If a pivot exists, print the index; if no such index exists, print `-1`.
 
 **Restrictions**
 
-The solution must be contained within a `Main()` function that returns an empty string `""` while printing the result directly to the console.
+* The solution must be contained within a `Main()` function that returns an empty string `""` while printing the result directly to the console.
 
 ---
 
@@ -64,11 +64,13 @@ You are tasked with finding all "peak elements" in a 1D integer array, where a p
 
 **Requirements & Restrictions:**
 
-**Requirements**<br>You must print the index and the value of every peak found in the format: Index: [i], Value: [n].
+**Requirements**<br>
+* You must print the index and the value of every peak found in the format: Index: [i], Value: [n].
 
-**Restrictions** <br>You cannot use built-in Python functions like max(), sort(), or any external libraries like NumPy; you must use a standard list and a manual loop.
+**Restrictions** <br>
+* You cannot use built-in Python functions like max(), sort(), or any external libraries like NumPy; you must use a standard list and a manual loop.
 
-Output: Your Main() function must return an empty string "", ensuring all results are displayed via print() calls.
+* Output: Your Main() function must return an empty string "", ensuring all results are displayed via print() calls.
 ## Result 
 ```py
 import random; 
@@ -89,4 +91,54 @@ Main()
 ```
 
 ####  Time Complexity --> O($n$)<br>Space Complexity --> O(n)
+## Question 
+### The Challenge: The Monotonic Trend Detector
+You are tasked with writing a function to determine if a sequence of recorded data (like stock prices or sensor readings) follows a **Monotonic Trend**. A sequence is monotonic if it is either entirely non-increasing or entirely non-decreasing.
 
+**Requirements & Restrictions:**
+
+
+
+
+**Requirements:**
+
+-   Create a list of 10 integers, for example: `data = [1, 2, 2, 3, 7]` (Monotonic) or `data = [1, 3, 2]` (Not Monotonic).
+    
+-   Your logic must check the entire array to see if the direction of change remains consistent (always $\geq$ or always $\leq$).
+    
+-   Print `True` if the array is monotonic and `False` if it is not.
+    
+
+**Restrictions:**
+
+-   You must use a single manual loop to compare adjacent elements.
+    
+-   You cannot use `sort()`, `sorted()`, or any method that reorders the array.
+    
+-   Your `Main()` function must return `""` and print the result directly.
+## Result 
+```py
+def Main(data):
+    Monotonic_Up = True; ## Gaan groter en groter
+    Monotonic_Down = True; ## Gaan kleiner en kleiner 
+    
+    for x in range(1, len(data)):
+        if data[x] >= data[x-1]:
+            pass;
+        else:
+            Monotonic_Up = False;
+        if data[x] <= data[x-1]:
+            pass;
+        else:
+            Monotonic_Down = False; 
+    
+    if Monotonic_Up and Monotonic_Down:
+        print(True)
+    else:
+        print(False)
+    return ""
+    
+Main([1, 1, 1, 1, 2, 3, 4, 5, 6])
+    
+```
+####  Time Complexity --> O($n$)<br>Space Complexity --> O(1)
