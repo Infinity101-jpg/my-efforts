@@ -23,13 +23,12 @@ Write a Python program that analyzes a list of daily temperatures to find a "Piv
 Would you like me to provide a set of test cases to verify your code once you've finished?<br>
 ## Result --> 
 ```python
-List_Temps = [10, -5, 3, 8, 2, 6]
-List_Left = [] 
-List_Right = [] 
-Success=False; 
-Cur = 0;
 def Main():
-    global List_Temps, List_Left, List_Right, Success; 
+    List_Temps = [10, -5, 3, 8, 2, 6]
+    List_Left = [] 
+    List_Right = [] 
+    Success=False; 
+    Cur = 0;
     for x in range(0, len(List_Temps)-2):
         List_Left.clear() 
         List_Right.clear() 
@@ -49,6 +48,7 @@ def Main():
     return "";
 
 Main() 
+
 
 ```
 ### Time Complexity --> $O(n^2)$
