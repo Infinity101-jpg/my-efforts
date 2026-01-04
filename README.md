@@ -1,27 +1,28 @@
+
 # My Python problem-solving portfolio
-Problems are generated with Google Gemini<br>
-Answers are my own answers
+Problems are generated with Google Gemini<br>Answers are my own answers
 
 ## 2026/01/04 
-## Question --> 
+## Question 
 ### The Challenge: Temperature Pivot Finder
 
 Write a Python program that analyzes a list of daily temperatures to find a "Pivot Index." This is the position where the sum of all temperatures to the **left** of the index is exactly equal to the sum of all temperatures to the **right**.
 
-**The Requirements**
+**Requirements & Restrictions:**
+
+**Requirements**
 
 * Create an array (list) of integers representing temperatures, such as `temps = [10, -5, 3, 8, 2, 6]`.
 * Your logic must calculate the total sums on both sides for every possible index until a match is found.
 * If a pivot exists, print the index; if no such index exists, print `-1`.
 
-**The Restrictions**
+**Restrictions**
 
 * The solution must be contained within a `Main()` function that returns an empty string `""` while printing the result directly to the console.
 
 ---
 
-Would you like me to provide a set of test cases to verify your code once you've finished?<br>
-## Result --> 
+## Result 
 ```python
 def Main(List_Temps):
     List_Left = [] 
@@ -50,5 +51,42 @@ Main([10, -5, 3, 8, 2, 6])
 
 
 ```
-### Time Complexity --> $O(n^2)$
-### Space Complexity --> $O(n)$
+####  Time Complexity --> O($n^2$)<br>Space Complexity --> O(n)
+
+
+
+
+
+
+## Question 
+### The Challenge: Array Equilibrium Point
+You are tasked with finding all "peak elements" in a 1D integer array, where a peak is defined as an element that is strictly greater than its immediate neighbors. Create a Main() function that initializes an array of at least 10 random integers and iterates through it to identify these points. For elements at the boundaries (the first and last indices), they only need to be greater than their single neighbor to be considered a peak.
+
+**Requirements & Restrictions:**
+
+**Requirements**<br>You must print the index and the value of every peak found in the format: Index: [i], Value: [n].
+
+**Restrictions** <br>You cannot use built-in Python functions like max(), sort(), or any external libraries like NumPy; you must use a standard list and a manual loop.
+
+Output: Your Main() function must return an empty string "", ensuring all results are displayed via print() calls.
+## Result 
+```python
+import random; 
+def Main():
+    New_Array_Init = ['']*10;
+    for x in range(0, len(New_Array_Init)):
+        New_Array_Init[x] = random.randint(1, 100);
+    New_Array_Init.insert(0, -100);
+    New_Array_Init.append(-100)
+    print(New_Array_Init)
+    for y in range(1, len(New_Array_Init)-1):
+        if (New_Array_Init[y] > New_Array_Init[y+1]) and ((New_Array_Init[y] > New_Array_Init[y-1])):
+            print(f"Index: {y-1}, Value: {New_Array_Init[y]}")
+    return "";
+
+Main() 
+
+```
+
+####  Time Complexity --> O($n^2$)<br>Space Complexity --> O(n)
+
