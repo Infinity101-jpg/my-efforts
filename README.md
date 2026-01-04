@@ -23,8 +23,7 @@ Write a Python program that analyzes a list of daily temperatures to find a "Piv
 Would you like me to provide a set of test cases to verify your code once you've finished?<br>
 ## Result --> 
 ```python
-def Main():
-    List_Temps = [10, -5, 3, 8, 2, 6]
+def Main(List_Temps):
     List_Left = [] 
     List_Right = [] 
     Success=False; 
@@ -47,7 +46,7 @@ def Main():
         print(-1)
     return "";
 
-Main() 
+Main([10, -5, 3, 8, 2, 6]) 
 
 
 ```
