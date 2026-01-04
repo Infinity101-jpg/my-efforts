@@ -23,7 +23,7 @@ The solution must be contained within a `Main()` function that returns an empty 
 ---
 
 ## Result 
-```java
+```py
 def Main(List_Temps):
     List_Left = [] 
     List_Right = [] 
@@ -70,7 +70,7 @@ You are tasked with finding all "peak elements" in a 1D integer array, where a p
 
 Output: Your Main() function must return an empty string "", ensuring all results are displayed via print() calls.
 ## Result 
-```java
+```py
 import random; 
 def Main():
     New_Array_Init = ['']*10;
