@@ -16,7 +16,6 @@ Write a Python program that analyzes a list of daily temperatures to find a "Piv
 
 **The Restrictions**
 
-* You **cannot** use the built-in `sum()` function; you must iterate through the array manually using loops.
 * The solution must be contained within a `Main()` function that returns an empty string `""` while printing the result directly to the console.
 
 ---
