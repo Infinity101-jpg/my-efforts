@@ -12,18 +12,18 @@ Write a Python program that analyzes a list of daily temperatures to find a "Piv
 
 **Requirements**
 
-* Create an array (list) of integers representing temperatures, such as `temps = [10, -5, 3, 8, 2, 6]`.
-* Your logic must calculate the total sums on both sides for every possible index until a match is found.
-* If a pivot exists, print the index; if no such index exists, print `-1`.
+Create an array (list) of integers representing temperatures, such as `temps = [10, -5, 3, 8, 2, 6]`.
+Your logic must calculate the total sums on both sides for every possible index until a match is found.
+If a pivot exists, print the index; if no such index exists, print `-1`.
 
 **Restrictions**
 
-* The solution must be contained within a `Main()` function that returns an empty string `""` while printing the result directly to the console.
+The solution must be contained within a `Main()` function that returns an empty string `""` while printing the result directly to the console.
 
 ---
 
 ## Result 
-```python
+```java
 def Main(List_Temps):
     List_Left = [] 
     List_Right = [] 
@@ -70,7 +70,7 @@ You are tasked with finding all "peak elements" in a 1D integer array, where a p
 
 Output: Your Main() function must return an empty string "", ensuring all results are displayed via print() calls.
 ## Result 
-```python
+```java
 import random; 
 def Main():
     New_Array_Init = ['']*10;
@@ -88,5 +88,5 @@ Main()
 
 ```
 
-####  Time Complexity --> O($n^2$)<br>Space Complexity --> O(n)
+####  Time Complexity --> O($n$)<br>Space Complexity --> O(n)
 
